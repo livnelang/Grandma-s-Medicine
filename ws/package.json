@@ -1,0 +1,15 @@
+{
+  "name": "ws",
+  "version": "1.0.0",
+  "description": "WS Application",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Livne & Maoz",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.12.4"
+  }
+}

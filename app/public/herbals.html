@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html ng-app="grandmaApp">
+<head>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" href="css/default.css">
+	<title>Herbals Page</title>		<script src="js/jquery.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+	<script src="js/herbal.js"></script>		<script src="js/general.js"></script>	
+</head>
+<body ng-controller="HerbalCtrl">
+	<div id="wrapper">
+		<header class="others_head">			<div id="logo"></div>		
+			<section id="back_button">
+				<a href="javascript:history.back()"> </a>
+			</section>
+		</header>		<div style="clear: both;"></div>
+			<main class="others_main">
+				<section class="top_title">
+					<h1>צמחי מרפא</h1>
+				</section>
+					<div id="herbals_container">
+						<div ng-repeat="item in herbals.items" class="herbal">
+							 <section class="herbal_pic" ng-model="item.imglink" >
+							 	<a href="herbal_open.html?herbal={{ item.title }}"> <img src=" {{ item.imglink }}"> </a>
+							 </section>
+							 <section class="herbal_title" > {{ item.title }} </section>
+						</div>
+					</div>
+			</main>
+			<div class="lower_line"> <div>
+	</div> 
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html ng-app="grandmaApp">
+<head>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" href="css/default.css">
+	<title>Specific Herbal Page</title>		<script src="js/jquery.js"></script>	
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+	<script src="js/specific_herbal.js"></script>	<script src="js/general.js"></script>	
+</head>
+<body ng-controller="SpecHerbalCtrl">
+	<div id="wrapper">
+		<header class="others_head">			<div id="logo"></div>		
+			<section id="back_button">
+				<a href="javascript:history.back()"> </a>
+			</section>
+		</header>
+			<main class="others_main" id="open_herbal">
+				<img src=" {{ herbals.specific_herbal.imglink }}">
+				<section id="herbal_name">
+					<h1> {{ herbals.specific_herbal.title }} </h1>
+				</section>
+				<div id="open_herbal_container">
+					<p ng-model="herbals.items[0]"> {{herbals.specific_herbal.desc}} </p>
+					<h2> יתרונות בריאותיים </h2>
+					<p ng-repeat="quality in herbals.specific_herbal.qualities">  {{ quality }} </p>
+				</div>
+			</main>
+			<div class="lower_line"> <div>
+	</div>
+</body>
+</html>
