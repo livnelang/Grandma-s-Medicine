@@ -1,6 +1,6 @@
 Grandma-s-Medicine
 ==============
-**WS Application For A Grandma Medicine **
+** WS Application For A Grandma Medicine **
 
 GitHub: https://github.com/livnelang/Grandma-s-Medicine
 
