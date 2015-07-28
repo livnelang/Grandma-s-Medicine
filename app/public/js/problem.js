@@ -10,14 +10,12 @@ var model = {
 	*/
 	var parameter = window.location.search.replace( "?", "" ); // will return the GET parameter 
 	var values = parameter.split("=");
-	console.log('incoming values: ' + values); // will return and array as ["name", "sample"] 
 	var query = values[1];
 
 	/**
 	* Returns Body Part Problems
 	*/
 	$http.get("https://grandmas-medicine.herokuapp.com/ws_grandma/getAreaProblems/"+query).success(function (data) {
-		console.log('entered browser request: ' + data);
 		model.items = data;
 		model.herbalname = data.area;
 		model.issues = data.issues;
