@@ -26,7 +26,6 @@ app.get('/ws_grandma/getHerbalsData', function (req,res) {
 * Returns all specific area problems FROM DB
 */
 app.get('/ws_grandma/getAreaProblems/:area', function (req,res) {
-	console.log('Request Body Area: ' + req.params.area);
 	res.header("Access-Control-Allow-Origin", "*");
 	res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
 	app.set('json spaces', 4);
@@ -41,7 +40,6 @@ app.get('/ws_grandma/getAreaProblems/:area', function (req,res) {
 * Returns specific Herbal
 */
 app.get('/ws_grandma/getSpecificHerbal/:herbal_name', function (req,res) {
-	console.log('Request Body Area: ' + req.params.herbal_name);
 	res.header("Access-Control-Allow-Origin", "*");
 	res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
 	app.set('json spaces', 4);
@@ -56,7 +54,6 @@ app.get('/ws_grandma/getSpecificHerbal/:herbal_name', function (req,res) {
 * Returns all matched Herbals - Problem 
 */
 app.get('/ws_grandma/getFilteredHerbal/:problem', function (req,res) {
-	console.log('Incoming problem: ' + req.params.problem);
 	res.header("Access-Control-Allow-Origin", "*");
 	res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
 	app.set('json spaces', 4);
