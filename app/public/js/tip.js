@@ -9,7 +9,6 @@ var model = {
 		* Returns Random Daily Tip
 		*/
 		$http.get("https://grandmas-medicine.herokuapp.com/ws_grandma/getDailyTip").success(function (data) {
-			console.log('entered browser request: ' + data);
 			model.tip = data;
 			}).error(function (data, status, headers, config) {
 			       alert("error" + data + status);
