@@ -69,10 +69,8 @@ exports.getFilteredHerbal = function(problem_name) {
 	// Filter By Problem Name
 	for (var i=0; i<arra.length;i++) {
 			if(containsQuality(arra[i].qualities, problem_name) == true ) {
-				console.log('exist' + arra[i].title);
 				results.push(arra[i]);
 			}
 		}
-		console.log('results: ' + results);
 		return results;		// Return array of herbal names with the problem
 };
